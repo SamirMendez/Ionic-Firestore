@@ -1,20 +1,12 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<ion-content>
+  <img class="homeIlustration" src="../../assets/icon/firebase.png" alt="Ion-Firestore" title="Ion-Firestore">
+  <div class="dataContainer">
+  <ion-card *ngFor="let item of data" >
+    <ion-item>
+      <ion-icon name="walk" slot="start"></ion-icon>
+      <ion-label>{{item?.idPerson || 'No tiene id'}}</ion-label>
+    </ion-item>
+    <ion-label class="skills">{{item.skills || 'No hay experiencia'}}</ion-label>
+  </ion-card>
   </div>
 </ion-content>
